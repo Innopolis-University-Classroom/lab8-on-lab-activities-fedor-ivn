@@ -1,23 +1,17 @@
 package com.muwaffaq.innopolis.solid.homework;
 
-
 import java.util.List;
 
 // lab work
 // This Class violates all SOLID Principles, fix it in a Logical way
-public class Human implements Needs {
-
+public class Human implements Marriable, Prayer, Sportsman, Employee, Businessman {
     private String name;
     private String nickname;
     private double salary;
     private List<String> hobbies;
 
-    enum Languages {Arabic, English, Japanese}
-
-    String sayHello(Languages languages) {
-        if (languages == Languages.Arabic)
-            return "مرحبا";
-        return "Hello";
+    String sayHello(Language language) {
+        return language.sayHello();
     }
 
     void calculateTax(int percentage) {
@@ -39,22 +33,22 @@ public class Human implements Needs {
 
     @Override
     public void playSports() {
-
+        // i am too lazy to implement it
     }
 
     @Override
     public void getMarried() {
-
+        // i am too lazy to implement it
     }
 
     @Override
     public void ownCompany() {
-
+        // i am too lazy to implement it
     }
 
     @Override
     public void becomeEmployee() {
-
+        // i am too lazy to implement it
     }
 
     public static void main(String[] args) {
